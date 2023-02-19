@@ -1,0 +1,213 @@
+:root {
+    --main-color: #CEBD88;
+    --btn-hover-color: rgb(60, 60, 60);
+    --text-dark: #28364B;
+}
+
+main {
+    background-image: url('../images/services-bg-2\ 1.png');
+    background-repeat: no-repeat;
+    background-color: rgba(206, 189, 136, 0.2);
+}
+
+
+/* HERO */
+.gallery .hero {
+    position: relative;
+    padding-top: 330px;
+    padding-bottom: 120px;
+    background-image: url('../images/hero-bg.png');
+    background-size: cover;
+}
+
+.gallery .hero .container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery .hero::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #28364B 0%, rgba(40, 54, 75, 0.77) 46.44%, rgba(40, 54, 75, 0) 100%);
+}
+
+.gallery .hero .hero-title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 30px;
+    color: #fff;
+}
+
+/* action */
+
+.gallery-actions {
+    padding: 50px 0;
+}
+
+.gallery-actions .container {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
+.gallery-actions .container button {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 20px 0;
+    width: 200px;
+    cursor: pointer;
+}
+
+.gallery-actions .container .foto-btn {
+    color: #fff;
+    background-color: #28364B;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s;
+}
+
+.gallery-actions .container .foto-btn:hover {
+    background-color: transparent;
+    color: var(--text-dark);
+}
+
+.gallery-actions .container .foto-btn::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+    border: 1px dashed #28364B;
+}
+
+.gallery-actions .container .video-btn {
+    color: var(--text-dark);
+    border: 1px solid #28364B;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.gallery-actions .container .video-btn:hover {
+    color: #fff;
+    background-color: #28364B;
+}
+
+@media only screen and (max-width: 600px) {
+    .gallery-actions .container button {
+        width: 100%;
+    }
+}
+
+/* ships details */
+.ships-details {
+    padding-bottom: 60px;
+}
+
+.ships-details .top-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    height: auto;
+}
+
+.ships-details .top-row .col {
+    width: 50%;
+    height: auto;
+}
+
+.ships-details .top-row .col .left-img {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+
+.ships-details .top-row .col:last-child {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: end; */
+}
+
+.ships-details .top-row .desc {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 20px;
+    line-height: 26px;
+}
+
+.ships-details .top-row .desc span {
+    display: block;
+    width: 100%;
+    padding: 5px 0;
+}
+
+.ships-details .top-row .ships-imgs {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 20px;
+}
+
+.ships-details .top-row .ships-imgs img {
+    width: 100%;
+}
+
+.ships-details .bottom-imgs {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 20px;
+}
+
+.ships-details .bottom-imgs .img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ships-details .bottom-imgs .img-box {
+    width: 100%;
+    height: 100%;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .ships-details .top-row {
+        flex-direction: column;
+    }
+
+    .ships-details .top-row .col {
+        width: 100%;
+    }
+
+    .ships-details .bottom-imgs {
+        grid-template-columns: auto auto;
+    }
+    
+}
+
+@media only screen and (max-width: 600px) {
+    .ships-details .top-row .ships-imgs {
+        grid-template-columns: auto auto;
+    }
+
+    .ships-details .bottom-imgs {
+        grid-template-columns: auto;
+    }
+}

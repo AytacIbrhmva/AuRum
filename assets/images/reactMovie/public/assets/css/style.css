@@ -1,0 +1,406 @@
+body {
+    background-image: url('../images/bg.jpg');
+    width: 100%;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+a{
+    text-decoration: none;
+}
+
+.header {
+    background-color: #011f4a;
+    margin-bottom: 40px;
+}
+
+.header .nav-menu {
+    height: 75px;
+    display: flex;
+    align-items: center;
+}
+
+.form-control{
+    height: 45px !important;
+}
+
+.header .nav-menu .brand a {
+    text-decoration: none;
+}
+
+.header .nav-menu .brand-logo {
+    color: white;
+    font-size: 34px;
+    cursor: pointer;
+    font-weight: 600;
+    margin: 0;
+}
+
+.header .brand img {
+    width: 100%;
+}
+
+.nav-menu .nav-links {
+    display: flex;
+    height: 100%;
+    margin: 0;
+}
+
+.nav-menu .nav-links li {
+    height: 100%;
+    line-height: 75px;
+    color: white;
+    padding: 0;
+}
+
+.nav-menu .nav-links li.active{
+    border-bottom: 2.5px solid #9fd72d;
+}
+
+
+.error{
+    border: 1px solid red;
+}
+
+.nav-menu .nav-links li:hover {
+    background-color: #74ad00;
+    transition: .2s;
+}
+
+.nav-menu .nav-links li a {
+    color: white;
+    text-decoration: none;
+    margin: 0px 20px;
+}
+
+
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid rgb(212, 212, 212);
+    border-radius: 5px;
+}
+
+.section .section-title {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.section .sectionTitle p{
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.inside-title {
+    font-weight: 700;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.side-padding {
+    margin-top: 40px;
+    margin-bottom: 45px;
+}
+
+.section-body {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    background-color: white;
+    padding: 30px;
+}
+
+.movieList {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movieSingle {
+    width: 18%;
+    position: relative;
+    margin: 1%;
+    height: 330px;
+    margin: 1%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.movieSingle .movieCover {
+    width: 100%;
+    height: 100%;
+}
+
+
+.movieCover img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.movieSingle:hover .movieCover img {
+    transition: .3s;
+}
+
+
+.movieSingle:hover .movieInfo {
+    transition: .2s;
+    background-color: #0000008c;
+
+}
+
+.movieInfo {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: #0000007e;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.movieInfo h4.movie-title {
+    color: #9fd72d;
+    font-size: 19px;
+    word-wrap: break-word;
+}
+
+.movieInfo * {
+    font-size: 16px;
+}
+
+.movieInfo .mcard-footer {
+    flex-wrap: wrap;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 0px 30px;
+    margin-bottom: 5px;
+}
+
+
+.movieInfo .mcard-end {
+    margin-bottom: 9px;
+}
+
+.movieInfo .mcard-end .quickActions {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.movieInfo .mcard-end .quickActions .quickView {
+    width: 45px;
+    margin-right: 5%;
+}
+
+.movieInfo .mcard-end .quickActions .movieDetail {
+    width: 100%;
+}
+
+.movieInfo .mcard-end .mcard-statistic .movie-comment {
+    margin-right: 0.5em;
+}
+
+.movieInfo .mcard-footer>*:first-child {
+    margin-left: 0;
+}
+
+.movieInfo .mcard-footer>*:last-child {
+    margin-right: 0;
+}
+
+.mcard-statistic {
+    display: flex;
+
+}
+
+.btn.btnPrimary {
+    border: 1px solid white;
+    color: white;
+}
+
+.movieInfo .btn.btnPrimary {
+    display: none;
+    font-size: 15.5px;
+    font-weight: 400;
+}
+
+.movieInfo:hover .btn.btnPrimary {
+    display: block;
+    transition: .5;
+}
+
+.btn.btnPrimary:hover {
+    border: 1px solid #74ad00;
+    transition: .5;
+    background-color: #74ad00;
+}
+
+
+.sectionTitle {
+    margin-bottom: 20px;
+}
+
+.sectionTitle h1 {
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    padding: 0;
+    margin: 0
+}
+
+.movieImage {
+    width: 30%;
+}
+
+.movieImage img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.movieDescription {
+    width: 100%;
+    font-size: 15.8px;
+}
+
+
+
+.partsSide .moviePart {
+    width: 100%;
+    background-color: black;
+    position: relative;
+    color: white;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.partsSide .moviePart .partCover {
+    width: 100%;
+    height: 80px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    border-radius: 7px
+}
+
+.partsSide .moviePart .moviePartContent {
+    position: absolute;
+    padding: 18px;
+    top: 0;
+}
+
+.partsSide .moviePart .moviePartContent h5:hover {
+    color: #9fd72d;
+    transition: .2s;
+}
+
+.partsSide .moviePart .moviePartContent * {
+    font-size: 15px;
+}
+
+
+.commentSide .comment {
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.commentSide .comment .author {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgb(240, 240, 240);
+}
+
+
+.commentSide .comment .author img {
+    width: 50px;
+    height: 50px;
+}
+
+.commentSide .comment .author h5 {
+    font-size: 16px;
+    margin: 0;
+}
+
+.commentSide .comment .commentContent {
+    margin-top: 15px;
+    width: 100%;
+    font-size: 15px;
+}
+
+.commentSide .comment .author-meta {
+    margin-left: 20px;
+}
+
+.commentSide .comment .author-meta span {
+    font-size: 14.5px;
+}
+
+
+.commentSide .addComment textarea {
+    margin-bottom: 20px;
+}
+
+.commentSide .addComment {
+    margin-bottom: 30px;
+}
+
+.favBtn {
+    border: 1px solid #74ad00;
+    color: #74ad00;
+}
+
+.favBtn.active {
+    color: white;
+    background-color: #74ad00;
+}
+
+.favBtn:hover {
+    background-color: #74ad00;
+    color: white;
+}
+
+.movieTitle .actions {
+    width: 100%;
+    text-align: end;
+}
+
+.movieMeta{
+    font-size: 15px;
+}
+
+
+
+
+/* ##########  CONTACT PAGE ######### */
+
+.contactSide{
+    padding: 30px;
+}
+.contacts-info{
+    width: 80%;
+    margin-bottom: 40px;
+}
+.contacts-info .contact{
+    color: black;
+    padding: 20px 10px;
+    width: 90%;
+    border-bottom: 1px solid #f3f3f3;
+}
+.contacts-info .contact i{
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.contactSide .form{
+    width: 100%;
+}

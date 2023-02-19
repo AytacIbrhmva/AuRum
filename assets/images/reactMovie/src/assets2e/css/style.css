@@ -1,0 +1,212 @@
+body {
+    background-image: url('../images/bg.jpg');
+    width: 100%;
+    height: 100%;
+}
+
+.section .section-title {
+    color: white;
+    margin-bottom: 25px;
+}
+
+.section-body {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    background-color: white;
+    padding: 20px;
+}
+
+.movieList {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movieSingle {
+    width: 18%;
+    position: relative;
+    margin: 1%;
+    height: 320px;
+    margin: 1%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.movieSingle .movieCover {
+    width: 100%;
+    height: 100%;
+}
+
+
+.movieCover img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.movieSingle:hover .movieCover img {
+    transition: .3s;
+}
+
+
+.movieSingle:hover .movieInfo {
+    transition: .2s;
+    background-color: #0000008c;
+
+}
+
+.movieInfo {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: #0000007e;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.movieInfo h4.movie-title {
+    color: #9fd72d;
+    font-size: 19px;
+    word-wrap: break-word;
+}
+
+.movieInfo * {
+    font-size: 16px;
+}
+
+.movieInfo .mcard-footer {
+    flex-wrap: wrap;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 0px 30px;
+    margin-bottom: 5px;
+}
+
+
+.movieInfo .mcard-end {
+    margin-bottom: 9px;
+}
+
+.movieInfo .mcard-end .quickActions {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.movieInfo .mcard-end .quickActions .quickView {
+    width: 45px;
+    margin-right: 5%;
+}
+
+.movieInfo .mcard-end .quickActions .movieDetail {
+    width: 100%;
+}
+
+.movieInfo .mcard-end .mcard-statistic .movie-comment {
+    margin-right: 0.5em;
+}
+
+.movieInfo .mcard-footer>*:first-child {
+    margin-left: 0;
+}
+
+.movieInfo .mcard-footer>*:last-child {
+    margin-right: 0;
+}
+
+.mcard-statistic {
+    display: flex;
+
+}
+
+.btn.btnPrimary {
+    border: 1px solid white;
+    color: white;
+}
+
+.movieInfo .btn.btnPrimary {
+    display: none;
+    font-weight: 600;
+}
+
+.movieInfo:hover .btn.btnPrimary {
+    display: block;
+    transition: .5;
+}
+
+.btn.btnPrimary:hover {
+    border: 1px solid #74ad00;
+    transition: .5;
+    background-color: #74ad00;
+}
+
+
+
+
+
+
+
+
+/* ////////// MODAL //////////// */
+
+
+.rmodal {
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.418);
+    top: 0;
+    left: 0;
+}
+
+.rmodal .rmodal-content{
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    float: right;
+    width: 40%;
+    height: 100%;
+    padding: 40px;
+}
+
+.rmodal-header{
+    display: flex;
+    width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 1px solid gray;
+}
+
+.rmodal-header>*{
+    width: 100%;
+
+}
+
+.rmodal-header .close{
+    float: right;
+    text-align: right;
+}
+
+
+.rmodal-body{
+    background-color: gray;
+}
+
+.rmodal-footer{
+    flex-wrap: wrap;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 0px 30px;
+    margin-bottom: 5px;
+}
+
+
+.rmodal-footer .actions{
+    /* position: absolute; */
+    bottom: 0;
+    margin-bottom: 35px;
+}

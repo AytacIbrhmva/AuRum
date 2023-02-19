@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuRum</title>
+    <link rel="stylesheet" href="/assets/css/utilities.css">
+    <link rel="stylesheet" href="/assets/css/about.css">
+    <link rel="stylesheet" href="/assets/css/layout.css">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <script src="https://kit.fontawesome.com/982fb1c4c4.js" crossorigin="anonymous"></script>
+
+
+
+</head>
+<body onscroll="handleScroll()">
+   <div class="header">
+      <div class="container">     
+          <div class="top">
+              <div class="row">
+                  <div class="col">
+                      <div class="social-medias">
+                          <a href="">
+                              <img src="/assets/icons/linkedin.png" alt="linkedin">
+                          </a>
+                          <a href="">
+                              <img src="/assets/icons/twitter.png" alt="twitter">
+                          </a>
+                          <a href="">
+                              <img src="/assets/icons/ig.png" alt="instagram">
+                          </a>
+                          <a href="">
+                              <img src="/assets/icons/youtube.png" alt="youtube">
+                          </a>
+                      </div>
+                  </div>
+                  <div class="col">
+                      <a href="/pages/Home.html">
+                          <img src="/assets/images/logo.png" alt="">
+                      </a>
+                  </div>
+                  <div class="col">
+                      <div class="lang-container">
+                          <button class="active">Az</button>
+                          <button>Ru</button>
+                          <button>En</button>
+                      </div>
+                  </div>
+              </div>
+          </div> 
+          <nav>
+              <ul>
+                  <li>
+                      <a href="./Home.html">Ana səhifə</a>
+                  </li>
+                  <li>
+                      <a href="./About.html" class="active">Haqqımızda</a>
+                  </li>
+                  <li>
+                      <a href="./Services.html">
+                            Xidmətlər
+                            <img src="/assets/icons/arrow-icon.png" alt="">
+                        </a>
+                  </li>
+                  <li>
+                      <a href="./Ships.html">Gəmilər</a>
+                  </li>
+                   </li>
+                  <li>
+                      <a href="./Blog.html">Blog</a>
+                  </li>
+                  <li>
+                      <a href="./Gallery.html">Qalereya</a>
+                  </li>
+                  <li>
+                      <a href="./Contact.html">Əlaqə</a>
+                  </li>
+              </ul>
+          </nav>
+      </div>
+  </div>
+  <div class="header-mobile">
+      <div class="container">   
+          <a class="logo" href="/pages/Home.html">
+              <img src="/assets/images/logo.png" alt="">
+          </a>  
+          <i id="openIcon" class="fa-sharp fa-solid fa-bars menu-icon"></i>
+
+
+          <div id="sidebar" class="sidebar t-0">
+              <i id="closeIcon" class="fa-solid fa-xmark menu-icon"></i>
+
+              <nav>
+               <ul>
+                   <li>
+                       <a href="./Home.html">Ana səhifə</a>
+                   </li>
+                   <li>
+                       <a href="./About.html" class="active">Haqqımızda</a>
+                   </li>
+                   <li>
+                       <a href="./Services.html">Xidmətlər</a>
+                   </li>
+                   <li>
+                       <a href="./Ships.html">Gəmilər</a>
+                   </li>
+                    </li>
+                   <li>
+                       <a href="./Blog.html">Blog</a>
+                   </li>
+                   <li>
+                       <a href="./Gallery.html">Qalereya</a>
+                   </li>
+                   <li>
+                       <a href="./Contact.html">Əlaqə</a>
+                   </li>
+               </ul>
+               </nav>
+              
+              <div class="social-medias">
+                  <a href="">
+                      <img src="/assets/icons/linkedin.png" alt="linkedin">
+                  </a>
+                  <a href="">
+                      <img src="/assets/icons/twitter.png" alt="twitter">
+                  </a>
+                  <a href="">
+                      <img src="/assets/icons/ig.png" alt="instagram">
+                  </a>
+                  <a href="">
+                      <img src="/assets/icons/youtube.png" alt="youtube">
+                  </a>
+              </div>
+          
+              <div class="lang-container">
+                  <button class="active">Az</button>
+                  <button>Ru</button>
+                  <button>En</button>
+              </div>
+                  
+          </div> 
+
+      </div>
+  </div>
+  
+  <div class="about">
+    <div class="hero">
+        <div class="container">
+        <h1 class="hero-title">HAQQIMIZDA</h1>
+        </div>
+    </div>
+    <main>
+        <div class="who-us">
+            <div class="container">              
+                <div class="col">
+                    <div class="title-container">
+                        <h6 class="subtitle">Biz kimik?</h6>
+                        <h3 class="title">Biz kimik?</h3>
+                        <img class="underline-img" src="../assets/icons/title-underline.png" alt="underline"/>
+                    </div>                            
+                    <p class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </div>
+                <div class="col">
+                    <img class="top-img" src="../assets/images/home-service-ship.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="our-mission">
+            <div class="container">
+                <div class="title-container">
+                    <h6 class="subtitle">Missiyamız</h6>
+                    <h3 class="title">Missiyamız</h3>
+                    <img class="underline-img" src="../assets/icons/title-underline.png" alt="underline"/>
+                </div>
+                <div class="card-container">
+
+
+                    <div class="swiper swiper-2">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="card">                          
+                                    <div class="card-top-img">
+                                        <img src="../assets/images/card-img11.png" alt=""/>
+                                    </div>
+                                    <h4 class="card-title">Lorem ipsum</h4>
+                                    <p class="card-desc">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                                    </p>
+                                    <div class="number">1</div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card">                          
+                                    <div class="card-top-img">
+                                        <img src="../assets/images/card-img12.png" alt=""/>
+                                    </div>
+                                    <h4 class="card-title">Lorem ipsum</h4>
+                                    <p class="card-desc">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                                    </p>
+                                    <div class="number">2</div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card">                          
+                                    <div class="card-top-img">
+                                        <img src="../assets/images/card-img13.png" alt=""/>
+                                    </div>
+                                    <h4 class="card-title">Lorem ipsum</h4>
+                                    <p class="card-desc">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                                    </p>
+                                    <div class="number">3</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>
+
+        <div class="ceo">
+            <div class="container">        
+                <div class="col">
+                    <img class="ceo-img" src="/assets/images/ceo.png" alt="">
+                </div>      
+                <div class="col">
+                    <h4 class="title">CEO</h4>  
+                    <p class="desc">
+                        “Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.”
+                    </p>          
+                </div>
+            </div>
+        </div>
+
+        <div class="certificates">
+            <div class="container">
+                <div class="title-container">
+                    <h6 class="subtitle">Sertifikatlar</h6>
+                    <h3 class="title">Sertifikatlar</h3>
+                    <img class="underline-img" src="../assets/icons/title-underline.png" alt="underline"/>
+                </div>  
+                <div class="row">
+                    <div class="cerf-img">
+                        <img class="frame" src="/assets/images/ramka 1.png" alt="">
+                        <img class="cerf" src="/assets/images/classy-ornamental-certificate-template-beige-black_53876-116396 1.png" alt="">
+                    </div>
+                    <div class="cerf-img">
+                        <img class="frame" src="/assets/images/ramka 1.png" alt="">
+                        <img class="cerf" src="/assets/images/1600w-0q9YD261Ep8 1.png" alt="">
+                    </div>
+                    <div class="cerf-img">
+                        <img class="frame" src="/assets/images/ramka 1.png" alt="">
+                        <img class="cerf" src="/assets/images/8faec3a389cd628f24293abef4d3a26b 1.png" alt="">
+                    </div>
+                    <div class="cerf-img">
+                        <img class="frame" src="/assets/images/ramka 1.png" alt="">
+                        <img class="cerf" src="/assets/images/student-certificate 1.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="sponsors">
+            <div class="container">          
+                <img src="../assets/images/pngwing 1.png" alt="">
+                <img src="../assets/images/pngwing 2.png" alt="">
+                <img src="../assets/images/pngwing 3.png" alt="">
+                <img src="../assets/images/pngwing 4.png" alt="">
+                <img src="../assets/images/pngwing 5.png" alt="">
+            </div>
+        </div>
+
+        <div class="team">
+            <div class="container">
+                <div class="card">
+                    <div class="frame first"><img src="/assets/images/jonas-kakaroto-KIPqvvTOC1s-unsplash 1.png" alt=""></div>
+                    <h6 for="" class="title">Akbar Mammadov</h6>
+                    <h6 for="" class="role">Development Lead</h6>
+                </div>
+                <div class="card">
+                    <div class="frame"><img src="/assets/images/jake-nackos-IF9TK5Uy-KI-unsplash 1.png" alt=""></div>
+                    <h6 for="" class="title">Aysel Alakbarova</h6>
+                    <h6 for="" class="role">HR & Administrative Officer</h6>
+                </div>
+                <div class="card">
+                    <div class="frame"><img src="/assets/images/ludovic-migneault-EZ4TYgXPNWk-unsplash 1.png" alt=""></div>
+                    <h6 for="" class="title">Ali Aliyev</h6>
+                    <h6 for="" class="role">Financial Officer</h6>
+                </div>
+                <div class="card">
+                    <div class="frame"><img src="/assets/images/stephanie-liverani-Zz5LQe-VSMY-unsplash 1.png" alt=""></div>
+                    <h6 for="" class="title">Humay Alizada</h6>
+                    <h6 for="" class="role">Product Owner</h6>
+                </div>
+            </div>
+        </div>
+
+        <div id="statistics" class="statistics">
+            <div class="container">
+                <div class="card">
+                    <div class="card-top" id="first">0</div>
+                    <h4 class="card-title">Lorem ipsum</h4>
+                    <p class="card-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text</p>
+                </div>
+                <div class="card">
+                    <div class="card-top" id="second" >0</div>
+                    <h4 class="card-title">Lorem ipsum</h4>
+                    <p class="card-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text</p>
+                </div>
+                <div class="card">
+                    <div class="card-top" id="third">0</div>
+                    <h4 class="card-title">Lorem ipsum</h4>
+                    <p class="card-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+  </div>
+
+   <footer>
+      <div class="container">
+          <div class="col">
+            <a href="/pages/Home.html">
+                <img src="../assets/images/logo (5) 2.png" alt="">
+            </a>
+          </div>
+          <div class="col">
+              <ul>
+                  <li><a href="./Home.html">Ana səhifə</a></li>
+                  <li><a href="./About.html">Haqqımızda</a></li>
+                  <li><a href="./Services.html">Xidmətlər</a></li>
+                  <li><a href="./Ships.html">Gəmilər</a></li>
+              </ul>
+          </div>
+
+          <div class="col">
+              <ul>
+                  <li><a href="/">Blog</a></li>
+                  <li><a href="/">Qalereya</a></li>
+                  <li><a href="/">Əlaqə</a></li>
+              </ul>
+          </div>
+
+          <div class="col">
+              <p>Bakı şəh., Üzeyir Hacibeyov, 5/34A</p>
+              <div class="tel">
+                  Tel:
+                  <div>
+                      <a href="tel:+994 55 2666690">+994 55 2666690</a>
+                      <a href="tel:+994 55 4466646">+994 55 4466646</a>
+                  </div>
+              </div>
+              <div class="mail">Mail:
+                  <a href="mailto:">info@aurum.com</a>
+              </div>
+          </div>
+      </div>
+  </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+
+</body>
+</html>
+
+

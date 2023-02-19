@@ -1,0 +1,137 @@
+:root {
+    --main-color: #CEBD88;
+    --btn-hover-color: rgb(60, 60, 60);
+    --text-dark: #28364B;
+}
+
+main {
+    background-image: url('../images/services-bg-2\ 1.png');
+    background-repeat: no-repeat;
+    background-color: rgba(206, 189, 136, 0.2);
+}
+
+
+/* HERO */
+.blog .hero {
+    position: relative;
+    padding-top: 330px;
+    padding-bottom: 120px;
+    background-image: url('../images/hero-bg.png');
+    background-size: cover;
+}
+
+.blog .hero .container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blog .hero::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #28364B 0%, rgba(40, 54, 75, 0.77) 46.44%, rgba(40, 54, 75, 0) 100%);
+}
+
+.blog .hero .hero-title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 30px;
+    color: #fff;
+}
+
+/* list */
+.blog main .container {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 30px;
+    padding: 60px 0;
+}
+
+.blog main .container .card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.blog main .container .card .top-img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    display: flex;
+}
+
+.blog main .container .card .title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    color: #303030;
+} 
+
+.blog main .container .card .desc {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.blog main .container .card .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blog main .container .card .row .col {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.blog main .container .card .row a, .blog .container .card span {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color: #5C5B5B;
+    transition: .2s;
+}
+
+.blog main .container .card .row a, .blog .container .card .row {
+    color: #28364B;
+}
+
+.blog main .container .card .row a:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 900px) {
+    .blog main .container {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .blog main .container {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .blog main .container {
+        display: grid;
+        grid-template-columns: auto;
+    }
+}
