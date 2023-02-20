@@ -111,7 +111,7 @@ main .container .left .desc {
 
 /* right */
 main .container .right {
-  width: auto;
+  width: 480px;
 }
 
 main .container .right .title-container {
@@ -145,7 +145,7 @@ main .container .right .blog-list .card {
 }
 
 main .container .right .blog-list .card .col-img {
-    width: 220px;
+    width: 200px;
     height: 100%;
     object-fit: cover;
     display: flex;
@@ -155,7 +155,7 @@ main .container .right .blog-list .card .text-col {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 260px;
+    width: 100%;
     height: 100%;
 }
 
@@ -207,8 +207,8 @@ main .container .right .blog-list .card .text-col .row .col a:hover {
 
 @media only screen and (max-width: 1000px) {
 
-    main .container .right {
-        width: 100%;
+    main .container {
+        align-items: center;
     }
 
     main .container .right .blog-list {
@@ -227,9 +227,26 @@ main .container .right .blog-list .card .text-col .row .col a:hover {
         width: 100%;
     }
 
+    main .container .right .active-news .news-header {
+        flex-direction: column;
+    }
+
+    main .container .right .active-news .news-header .title-container {
+        margin-bottom: 20px;
+    }
+
+    main .container .right .active-news .news-header .date-container {
+        justify-content: end;
+    }
+
 }
 
 @media only screen and (max-width: 600px){
+
+    main .container .right {
+        width: 100%;
+    }
+
     main .container .right .blog-list .card {
         width: 100%;
         flex-direction: column;
@@ -240,6 +257,8 @@ main .container .right .blog-list .card .text-col .row .col a:hover {
     main .container .right .blog-list .card .text-col {
         width: 75%;
     }
+
+
 }
 
 
@@ -250,7 +269,7 @@ main .container .right .active-news {
 main .container .right .active-news .news-header {
     display: flex;
     justify-content: space-between;
-    background-color: red;
+    align-items: end;
 }
 
 main .container .right .active-news .news-header .date-container {
@@ -259,11 +278,10 @@ main .container .right .active-news .news-header .date-container {
 
 main .container .right .active-news .news-header .date-container .col {
     height: 42px;
-    background-color: #28364B;
-    width: 130px;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 
@@ -272,20 +290,29 @@ main .container .right .active-news .news-header .date-container .col:first-chil
     gap: 5px;
     align-items: center;
     background-color: #fff;
-    padding: 10px 13px;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
     line-height: 22px;
     color: #3E4F69;
+    padding: 0 20px;
 }
+
+main .container .right .active-news .news-header .date-container .col .arrow-down {
+    position: absolute;
+    right: 20px;
+    z-index: 0;
+    visibility: unset;
+}
+
+
 
 main .container .right .active-news .news-header .date-container .col select {
     background-color: #28364B;
     height: 100%;
     border: none;
-    padding: 0 13px;
+    padding: 0 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -296,10 +323,14 @@ main .container .right .active-news .news-header .date-container .col select {
     line-height: 22px;
     color: #FFFFFF;
     outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 main .container .right .active-news .news-header .date-container .col select option {
     border: none;
+    background-color: #28364B;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
@@ -307,5 +338,168 @@ main .container .right .active-news .news-header .date-container .col select opt
     line-height: 22px;
     color: #FFFFFF;
     outline: none;
-    padding: 5px;
+    padding:5px;
 }
+
+/* months */
+.months {
+    background-color: #CEBD88;
+}
+
+/* swiper */
+.swiper {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    color: #545454;
+    text-transform: capitalize;
+    padding: 14px 0;
+    text-align: center;
+}
+
+
+.swiper-slide-active {
+    font-weight: 600;
+    color: #28364B;
+}
+
+.swiper-slide-active::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: #28364B;
+    border-radius: 100%;
+    bottom: 10px;
+    left: 50%;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after  {
+    color: #fff;
+    font-size: 10px !important;
+}
+
+.swiper-button-prev::after {
+    transform: translateX(-20px);
+}
+
+.swiper-button-next::after {
+    transform: translateX(20px);
+}
+
+/* blog-list bottom */
+.blog-list-bottom {
+    padding: 20px;
+    background-color: #fff;
+}
+
+.blog-list-bottom .card {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 30px;
+}
+
+.blog-list-bottom .card .col-img {
+    width: 192px;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+}
+
+.blog-list-bottom .card .text-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.blog-list-bottom .card .text-col .title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 22px;
+    color: #303030;
+    margin-bottom: 10px;
+}
+
+.blog-list-bottom .card .text-col .desc {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 20px;
+    margin-bottom: 12px;
+}
+
+.blog-list-bottom .card .text-col .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.blog-list-bottom .card .text-col .row .col {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 15px;
+    color: #5C5B5B;
+}
+
+.blog-list-bottom .card .text-col .row .col a {
+    color: #28364B;
+}
+
+.blog-list-bottom .card .text-col .row .col a:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 1000px) {
+    .blog-list-bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+   .blog-list-bottom .card {
+        width: auto;
+        align-items: center;
+    }
+
+}
+
+@media only screen and (max-width: 600px){
+
+    .blog-list-bottom .card {
+        width: 100%;
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+
+    .blog-list-bottom .card .col-img,
+   .blog-list-bottom .card .text-col {
+        width: 80%;
+    }
+}
+

@@ -2,6 +2,7 @@ var swiper = new Swiper(".swiper-1", {
     slidesPerView: 1,
     spaceBetween: 0,
     loop: true,
+    effect: "fade",
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -13,10 +14,10 @@ var swiper = new Swiper(".swiper-1", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
-//  autoplay: {
-//  delay: 2500,
-//  disableOnInteraction: false,
-//   },
+ autoplay: {
+ delay: 2500,
+ disableOnInteraction: false,
+  },
     });
 
 
@@ -97,6 +98,24 @@ var swiper = new Swiper(".swiper-4", {
     }
     });
     
+var swiper = new Swiper(".swiper-5", {
+    loop: true,
+    spaceBetween: 10,
+    slidesPerView: 3,
+    centeredSlides: true,
+    breakpoints: {
+        600: {
+            slidesPerView: 1,
+        },
+        768: {
+            slidesPerView: 5,
+        }
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    });
 
 // Counter animation
 
