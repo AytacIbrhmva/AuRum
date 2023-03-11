@@ -30,6 +30,240 @@
     <link rel="stylesheet" href="/assets/css/home.css">
     <link rel="stylesheet" href="/assets/css/layout.css">
 
+    <style>
+      * {
+  font-family: "Poppins", "sans-serif";
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 100px 0;
+}
+.container .card_container {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.container .card_container .card_col {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.container .card_container .card_col .card_row {
+  max-width: 300px;
+  min-height: 300px;
+  padding: 30px;
+  background: #fff;
+  box-shadow: 0 0 9px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+}
+.container .card_container .card_col .card_row .card_plus {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 40px;
+  color: #36b68a;
+  text-decoration: none;
+}
+.container .card_container .card_col .card_row .top_img {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.container .card_container .card_col .card_row .top_img::after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  width: 50px;
+  height: 2px;
+  background-color: #36b68a;
+}
+.container .card_container .card_col .card_row .top_img img {
+  width: 84px;
+  height: 84px;
+}
+.container .card_container .card_col .card_row .text {
+  margin-top: 40px;
+  color: #1e202e;
+  font-size: 20px;
+  text-align: center;
+}
+.container .card_container .card_col .middle_row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #231c3d;
+  z-index: 99;
+}
+.container .card_container .card_col .middle_row h6 {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  width: 100px;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 45px;
+  text-align: center;
+  position: relative;
+}
+.container .card_container .card_col .middle_row h6::after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  width: 50px;
+  height: 2px;
+  background-color: #36b68a;
+}
+.container .card_container .card_col:first-child .card_row:first-child {
+  transform: translate(200px, 100px);
+  transform-origin: right;
+  transition: 0.5s;
+  opacity: 0;
+}
+.container .card_container .card_col:first-child .card_row:first-child.active {
+  transform: translate(0);
+  transform-origin: right;
+  transition: 0.5s;
+  opacity: 1;
+}
+.container .card_container .card_col:first-child .card_row:last-child {
+  transform: translate(200px, -100px);
+  transform-origin: right;
+  transition: 0.5s;
+  opacity: 0;
+}
+.container .card_container .card_col:first-child .card_row:last-child.active {
+  transform: translate(0);
+  transform-origin: right;
+  transition: 0.5s;
+  opacity: 1;
+}
+.container .card_container .card_col:nth-child(2) .card_row:first-child {
+  transform: translateY(200px);
+  transform-origin: bottom;
+  transition: 0.5s;
+  opacity: 0;
+}
+.container .card_container .card_col:nth-child(2) .card_row:first-child.active {
+  transform: translate(0);
+  transform-origin: bottom;
+  transition: 0.5s;
+  opacity: 1;
+}
+.container .card_container .card_col:nth-child(2) .card_row:last-child {
+  transform: translateY(-200px);
+  transform-origin: top;
+  transition: 0.5s;
+  opacity: 0;
+}
+.container .card_container .card_col:nth-child(2) .card_row:last-child.active {
+  transform: translate(0);
+  transform-origin: top;
+  transition: 0.5s;
+  opacity: 1;
+}
+.container .card_container .card_col:last-child .card_row:first-child {
+  transform: translate(-200px, 100px);
+  transform-origin: left;
+  transition: 0.5s;
+  opacity: 0;
+}
+.container .card_container .card_col:last-child .card_row:first-child.active {
+  transform: translate(0);
+  transform-origin: left;
+  transition: 0.5s;
+  opacity: 1;
+}
+.container .card_container .card_col:last-child .card_row:last-child {
+  transform: translate(-200px, -100px);
+  transform-origin: left;
+  transition: 0.5s;
+  opacity: 0;
+}
+.container .card_container .card_col:last-child .card_row:last-child.active {
+  transform: translate(0);
+  transform-origin: left;
+  transition: 0.5s;
+  opacity: 1;
+}
+.container .card_mobile_container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.container .card_mobile_container .card_box {
+  max-width: 300px;
+  min-height: 300px;
+  padding: 30px;
+  background: #fff;
+  box-shadow: 0 0 9px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+  max-width: 250px;
+}
+.container .card_mobile_container .card_box .card_plus {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 40px;
+  color: #36b68a;
+  text-decoration: none;
+}
+.container .card_mobile_container .card_box .top_img {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.container .card_mobile_container .card_box .top_img::after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  width: 50px;
+  height: 2px;
+  background-color: #36b68a;
+}
+.container .card_mobile_container .card_box .top_img img {
+  width: 84px;
+  height: 84px;
+}
+.container .card_mobile_container .card_box .text {
+  margin-top: 40px;
+  color: #1e202e;
+  font-size: 20px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 1000px) {
+  .container .card_container {
+    display: flex;
+  }
+  .container .card_mobile_container {
+    display: none;
+  }
+}
+.owl-carousel .item {
+  width: 100%;
+  display: flex;
+  background-color: red;
+}
+.owl-carousel .item img {
+  width: 100%;
+}
+    </style>
+
 </head>
 <body onscroll="handleScroll()">
 
@@ -76,7 +310,10 @@
                         <a href="./About.html">Haqqımızda</a>
                     </li>
                     <li>
-                        <a href="./Services.html">Xidmətlər</a>
+                        <a href="./Services.html">
+                              Xidmətlər
+                              <img src="/assets/icons/arrow-icon.png" alt="">
+                          </a>
                     </li>
                     <li>
                         <a href="./Ships.html">Gəmilər</a>
@@ -217,7 +454,112 @@
             </div>
         </div>
 
-        <button onclick="scrollToTop() " id="toTop"><i class="fa-solid fa-arrow-up"></i></button>
+
+
+        <div class="container">
+          <div class="card_container">
+              <div class="card_col">
+                  <div id="col1-row1" class="card_row">
+                      <a href="#" class="card_plus">+</a>
+                      <div class="top_img">
+                          <img src="https://www.kandasoft.com/wp-content/themes/pinboard/dist/images/icons/tile/gears-green.svg" alt="" >
+                      </div>
+                      <div class="text">Accelerating Innovation one application at a time</div>
+                  </div>
+                  <div id="col1-row2" class="card_row">
+                      <a href="#" class="card_plus">+</a>
+                      <div class="top_img">
+                          <img src="https://www.kandasoft.com/wp-content/themes/pinboard/dist/images/icons/tile/globe-green.svg " alt="" >
+                      </div>
+                      <div class="text">Accelerating Innovation one application at a time</div>
+                  </div>
+              </div>
+              <div class="card_col">
+                  <div id="col2-row1" class="card_row">
+                      <a href="#" class="card_plus">+</a>
+                      <div class="top_img">
+                          <img src="https://www.kandasoft.com/wp-content/themes/pinboard/dist/images/icons/tile/sport-green.svg" alt="" >
+                      </div>
+                      <p class="text">Accelerating Innovation one application at a time</p>
+                  </div>
+                  <div class="card_row middle_row">
+                      <h6>WHY CANDA?</h6>
+                  </div>
+                  <div id="col2-row2" class="card_row">
+                      <a href="#" class="card_plus">+</a>
+                      <div class="top_img">
+                          <img src="https://www.kandasoft.com/wp-content/themes/pinboard/dist/images/icons/tile/team-green.svg" alt="" >
+                      </div>
+                      <p class="text">Accelerating Innovation one application at a time</p>
+                  </div>
+              </div>
+              <div class="card_col">
+                  <div id="col3-row1" class="card_row">
+                      <a href="#" class="card_plus">+</a>
+                      <div class="top_img">
+                          <img src="https://www.kandasoft.com/wp-content/themes/pinboard/dist/images/icons/tile/clock-green.svg" alt="" >
+                      </div>
+                      <div class="text">Accelerating Innovation one application at a time</div>
+                  </div>
+                  <div id="col3-row2" class="card_row">
+                      <a href="#" class="card_plus">+</a>
+                      <div class="top_img">
+                          <img src="https://www.kandasoft.com/wp-content/themes/pinboard/dist/images/icons/tile/firewall-green.svg" alt="" >
+                      </div>
+                      <div class="text">Accelerating Innovation one application at a time</div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="card_mobile_container">
+              <div class="card_box">
+                  <a href="#" class="card_plus">+</a>
+                  <div class="top_img">
+                      <img src="https://www.kandasoft.com/wp-content/themes/pinboard/dist/images/icons/tile/gears-green.svg" alt="" >
+                  </div>
+                  <div class="text">Accelerating Innovation one application at a time</div>
+              </div>
+              <div class="card_box">
+                  <a href="#" class="card_plus">+</a>
+                  <div class="top_img">
+                      <img src="https://www.kandasoft.com/wp-content/themes/pinboard/dist/images/icons/tile/globe-green.svg " alt="" >
+                  </div>
+                  <div class="text">Accelerating Innovation one application at a time</div>
+              </div>
+              <div class="card_box">
+                  <a href="#" class="card_plus">+</a>
+                  <div class="top_img">
+                      <img src="https://www.kandasoft.com/wp-content/themes/pinboard/dist/images/icons/tile/sport-green.svg" alt="" >
+                  </div>
+                  <p class="text">Accelerating Innovation one application at a time</p>
+              </div>
+              <div class="card_box">
+                  <a href="#" class="card_plus">+</a>
+                  <div class="top_img">
+                      <img src="https://www.kandasoft.com/wp-content/themes/pinboard/dist/images/icons/tile/team-green.svg" alt="" >
+                  </div>
+                  <p class="text">Accelerating Innovation one application at a time</p>
+              </div>
+              <div class="card_box">
+                  <a href="#" class="card_plus">+</a>
+                  <div class="top_img">
+                      <img src="https://www.kandasoft.com/wp-content/themes/pinboard/dist/images/icons/tile/clock-green.svg" alt="" >
+                  </div>
+                  <div class="text">Accelerating Innovation one application at a time</div>
+              </div>
+              <div class="card_box">
+                  <a href="#" class="card_plus">+</a>
+                  <div class="top_img">
+                      <img src="https://www.kandasoft.com/wp-content/themes/pinboard/dist/images/icons/tile/firewall-green.svg" alt="" >
+                  </div>
+                  <div class="text">Accelerating Innovation one application at a time</div>
+              </div>
+          </div>
+      </div>
+
+
+
+
 
         <div class="content">
             <div class="home-services">
@@ -456,9 +798,14 @@
             </div>
         </div>
 
+        <div class="tests">
+          
+        </div>
+
 
     </div>
  
+    <button onclick="scrollToTop()">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas, aut.</button>
 
     <footer>
         <div class="container">
@@ -501,8 +848,67 @@
     </footer>
 
    
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="/assets/js/Home.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="../assets/js/script.js"></script> -->
+
+    <script>
+        let col1Row1 = document.getElementById('col1-row1')
+        let col1Row2 = document.getElementById('col1-row2')
+        let col2Row1 = document.getElementById('col2-row1')
+        let col2Row2 = document.getElementById('col2-row2')
+        let col3Row1 = document.getElementById('col3-row1')
+        let col3Row2 = document.getElementById('col3-row2')
+
+
+
+const handleScroll = () => {
+    if(window.pageYOffset >= col1Row1.getBoundingClientRect().y) {
+        col1Row1.className = 'card_row active'
+    } else {
+        col1Row1.className = 'card_row'
+    }
+
+    if(window.pageYOffset >= col1Row2.getBoundingClientRect().y) {
+        col1Row2.className = 'card_row active'
+    } else {
+        col1Row2.className = 'card_row'
+    }
+
+    if(window.pageYOffset >= col2Row1.getBoundingClientRect().y) {
+        col2Row1.className = 'card_row active'
+    } else {
+        col2Row1.className = 'card_row'
+    }
+
+    if(window.pageYOffset - 150 >= col2Row2.getBoundingClientRect().y) {
+        col2Row2.className = 'card_row active'
+    } else {
+        col2Row2.className = 'card_row'
+    }
+
+    if(window.pageYOffset>= col3Row1.getBoundingClientRect().y) {
+        col3Row1.className = 'card_row active'
+    } else {
+        col3Row1.className = 'card_row'
+    }
+
+    if(window.pageYOffset >= col3Row2.getBoundingClientRect().y) {
+        col3Row2.className = 'card_row active'
+    } else {
+        col3Row2.className = 'card_row'
+    }
+}
+
+
+        function scrollToTop() {
+            if (document.body.scrollTop !== 0 || document.documentElement.scrollTop !== 0) {
+                window.scrollBy(0, -50);
+                requestAnimationFrame(scrollToTop);
+            }
+        }
+        
+
+    </script>
 </body>
 </html>
 

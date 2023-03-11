@@ -27,3 +27,22 @@ ul {
     border: none;
  }
 
+
+ #toTop {
+   display: none;
+    position: fixed;
+    background-color: #465874;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 999999;
+    top: 80%;
+    right: 30px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+ }
+
+ #toTop i {
+    color: #fff;
+    font-size: 30px;
+ }

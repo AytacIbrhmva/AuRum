@@ -5,19 +5,30 @@
 }
 
 /* header */
-.header {
-    position: absolute;
-    padding-top: 35px;
-    z-index: 10;
-    width: 100%;
-}
+
 
 .header-mobile {
     display: none;
     position: absolute;
-    padding-top: 35px;
+    padding: 15px 0;
     z-index: 10;
     width: 100%;
+}
+
+.header-mobile.fixed {
+    position: fixed;
+    transition: 0.5s;
+    transform-origin: top;
+    transform: translateY(0);
+    background-color: #28364B;
+}
+
+.header-mobile.non-fixed {
+    position: fixed;
+    transition: 0.5s;
+    transform-origin: top;
+    transform: translateY(-100px);
+    background-color: #28364B;
 }
 
 .header-mobile .container {
@@ -42,38 +53,24 @@
     cursor: pointer;
 }
 
-#closeIcon {
-    position: absolute;
-    right: 30px;
-}
-
 .header-mobile .sidebar {
     position: fixed;
     display: flex;
     flex-direction: column;
+    align-items: center;
     background-color: #28364B;
-    width: 60%;
+    width: 100%;
     height: 100vh;
     right: 0;
     top: 0;
-    padding: 30px 25px;
-    padding-top: 50px;
+    padding: 25px 0;
+    padding-bottom: 50px;
     transition: 0.2s;
-    z-index: 99;
-    /* transform: scaleX(1);
-    transform-origin: right; */
+    z-index: 9999;
+    overflow-y: auto;
 }
 
-.header-mobile .sidebar::after {
-    position: absolute;
-    content: '';
-    right: 0;
-    top: 0;
-    width: 100vw;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.308);
-    z-index: -1;
-}
+
 
 .t-1 {
     transition: 0.2s;
@@ -90,13 +87,42 @@
     opacity: 0;
 }
 
+
+.header-mobile .sidebar .sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+}
+
+.header-mobile .sidebar .sidebar-header .logo img {
+    width: 120px;
+}
+
+.header-mobile .sidebar .sidebar-container {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+}
+
+
+#closeIcon {
+    border: 1px solid var(--main-color);
+    border-radius: 100%;
+    background-color: transparent;
+    width: 13px;
+    height: 13px;
+    padding: 15px;
+}
+
 .header-mobile .sidebar nav ul {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    align-items: center;
+    gap: 30px;
     list-style: none;
-    margin: 25px 0;
     margin-top: 60px;
+    margin-bottom: 60px;
 }
 
 .header-mobile .sidebar nav ul a {
@@ -116,37 +142,61 @@
     color: var(--main-color);
 }
 
+.header-mobile .sidebar .tel,
+.header-mobile .sidebar .mail
+ {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.header-mobile .sidebar .tel i,
+.header-mobile .sidebar .mail i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    color: #28364B;
+}
+
+.header-mobile .sidebar .tel .tel-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.header-mobile .sidebar .tel a,
+.header-mobile .sidebar .mail a  {
+    color: #fff;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+}
+
 .header-mobile .sidebar .social-medias {
     display: flex;
     gap: 20px;
     align-items: center;
-    margin-bottom: 25px;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
-.header-mobile .sidebar .lang-container {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
 
-.header-mobile .sidebar .lang-container button {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    color: #fff;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    transition: .2s;
+/* DESKTOP */
+.header {
+    position: absolute;
+    padding-top: 35px;
+    z-index: 10;
+    width: 100%;
 }
-
-.header-mobile .sidebar .lang-container button:hover, .header-mobile .sidebar .lang-container button.active {
-    color: var(--main-color);
-    text-decoration: underline;
-}
-
-/* desktop */
 
 .header .top .row {
     display: flex;
@@ -157,6 +207,14 @@
 .header .social-medias {
     display: flex;
     gap: 20px;
+}
+
+.header .social-medias img {
+    transition: .3s;
+}
+
+.header .social-medias img:hover {
+    transform: scale(1.2);
 }
 
 .header .lang-container {
@@ -221,11 +279,11 @@
     transition: .2s;
 }
 
-.header nav ul li a img {
+/* .header nav ul li a img {
     position: absolute;
     margin-left: 7px;
     bottom: 21px;
-}
+} */
 
 .header nav ul li a::after {
     content: '';

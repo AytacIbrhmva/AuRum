@@ -30,91 +30,49 @@
 
 
 </head>
-<body>
-   <div class="header">
-      <div class="container">     
-          <div class="top">
-              <div class="row">
-                  <div class="col">
-                      <div class="social-medias">
-                          <a href="">
-                              <img src="/assets/icons/linkedin.png" alt="linkedin">
-                          </a>
-                          <a href="">
-                              <img src="/assets/icons/twitter.png" alt="twitter">
-                          </a>
-                          <a href="">
-                              <img src="/assets/icons/ig.png" alt="instagram">
-                          </a>
-                          <a href="">
-                              <img src="/assets/icons/youtube.png" alt="youtube">
-                          </a>
-                      </div>
-                  </div>
-                  <div class="col">
-                      <a href="/Home.html">
-                          <img src="/assets/images/logo.png" alt="">
-                      </a>
-                  </div>
-                  <div class="col">
-                      <div class="lang-container">
-                          <button class="active">Az</button>
-                          <button>Ru</button>
-                          <button>En</button>
-                      </div>
-                  </div>
-              </div>
-          </div> 
-          <nav>
-              <ul>
-                  <li>
-                      <a href="./Home.html">Ana səhifə</a>
-                  </li>
-                  <li>
-                      <a href="./About.html">Haqqımızda</a>
-                  </li>
-                  <li>
-                      <a href="./Services.html">
-                            Xidmətlər
-                            <img src="/assets/icons/arrow-icon.png" alt="">
+<body onscroll="handleScroll()">
+
+    <div class="header">
+        <div class="container">     
+            <div class="top">
+                <div class="row">
+                    <div class="col">
+                        <div class="social-medias">
+                            <a href="">
+                                <img src="/assets/icons/linkedin.png" alt="linkedin">
+                            </a>
+                            <a href="">
+                                <img src="/assets/icons/twitter.png" alt="twitter">
+                            </a>
+                            <a href="">
+                                <img src="/assets/icons/ig.png" alt="instagram">
+                            </a>
+                            <a href="">
+                                <img src="/assets/icons/youtube.png" alt="youtube">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <a href="/Home.html">
+                            <img src="/assets/images/logo.png" alt="">
                         </a>
-                  </li>
-                  <li>
-                      <a href="./Ships.html">Gəmilər</a>
-                  </li>
-                   </li>
-                  <li>
-                      <a href="./Blog.html" class="active">Blog</a>
-                  </li>
-                  <li>
-                      <a href="./Gallery.html">Qalereya</a>
-                  </li>
-                  <li>
-                      <a href="./Contact.html">Əlaqə</a>
-                  </li>
-              </ul>
-          </nav>
-      </div>
-  </div>
-
-    <div class="header-mobile">
-        <div class="container">   
-            <a class="logo" href="/Home.html">
-                <img src="/assets/images/logo.png" alt="">
-            </a>  
-            <i id="openIcon" class="fa-sharp fa-solid fa-bars menu-icon"></i>
-
-
-            <div id="sidebar" class="sidebar t-0">
-                <i id="closeIcon" class="fa-solid fa-xmark menu-icon"></i>
-
-                <nav>
+                    </div>
+                    <div class="col">
+                        <div class="lang-container">
+                            <button class="active">Az</button>
+                            <button>Ru</button>
+                            <button>En</button>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <nav>
                 <ul>
                     <li>
                         <a href="./Home.html">Ana səhifə</a>
                     </li>
                     <li>
-                        <a href="./About.html">Haqqımızda</a>
+                        <a href="./About.html" >Haqqımızda</a>
                     </li>
                     <li>
                         <a href="./Services.html">Xidmətlər</a>
@@ -122,7 +80,7 @@
                     <li>
                         <a href="./Ships.html">Gəmilər</a>
                     </li>
-                        </li>
+                     </li>
                     <li>
                         <a href="./Blog.html" class="active">Blog</a>
                     </li>
@@ -133,33 +91,86 @@
                         <a href="./Contact.html">Əlaqə</a>
                     </li>
                 </ul>
-                </nav>
-                
-                <div class="social-medias">
-                    <a href="">
-                        <img src="/assets/icons/linkedin.png" alt="linkedin">
-                    </a>
-                    <a href="">
-                        <img src="/assets/icons/twitter.png" alt="twitter">
-                    </a>
-                    <a href="">
-                        <img src="/assets/icons/ig.png" alt="instagram">
-                    </a>
-                    <a href="">
-                        <img src="/assets/icons/youtube.png" alt="youtube">
-                    </a>
-                </div>
-            
-                <div class="lang-container">
-                    <button class="active">Az</button>
-                    <button>Ru</button>
-                    <button>En</button>
-                </div>
-                    
-            </div> 
-
+            </nav>
         </div>
     </div>
+    <div class="header-mobile" id="header-mobile">
+      <div class="container">   
+            <a class="logo" href="/Home.html">
+                <img src="/assets/images/logo.png" alt="">
+            </a>  
+            <i id="openIcon" class="fa-sharp fa-solid fa-bars menu-icon"></i>
+  
+  
+            <div id="sidebar" class="sidebar t-0">
+  
+              <div class="sidebar-header">
+                  <a class="logo" href="/Home.html">
+                      <img src="/assets/images/logo.png" alt="">
+                  </a>
+                  <i id="closeIcon" class="fa-solid fa-xmark menu-icon"></i>
+              </div>
+  
+              <div class="sidebar-container">
+                  <nav>
+                      <ul>
+                          <li>
+                              <a href="./Home.html">Ana səhifə</a>
+                          </li>
+                          <li>
+                              <a href="./About.html" >Haqqımızda</a>
+                          </li>
+                          <li>
+                              <a href="./Services.html">Xidmətlər</a>
+                          </li>
+                          <li>
+                              <a href="./Ships.html">Gəmilər</a>
+                          </li>
+                              </li>
+                          <li>
+                              <a href="./Blog.html" class="active">Blog</a>
+                          </li>
+                          <li>
+                              <a href="./Gallery.html">Qalereya</a>
+                          </li>
+                          <li>
+                              <a href="./Contact.html">Əlaqə</a>
+                          </li>
+                      </ul>
+                  </nav>
+  
+                  <div class="tel">
+                      <i class="fa-solid fa-phone"></i>
+                      <div class="tel-links">
+                          <a href="tel:+994 55 2666690">+994 55 2666690</a>
+                          <a href="tel:+994 55 4466646">+994 55 4466646</a>
+                      </div>
+                  </div>
+                  <div class="mail">
+                      <i class="fa-solid fa-envelope"></i>
+                      <a href="mailto:">info@aurum.com</a>
+                  </div>
+                  
+                  
+                  <div class="social-medias">
+                      <a href="">
+                          <img src="/assets/icons/linkedin.png" alt="linkedin">
+                      </a>
+                      <a href="">
+                          <img src="/assets/icons/twitter.png" alt="twitter">
+                      </a>
+                      <a href="">
+                          <img src="/assets/icons/ig.png" alt="instagram">
+                      </a>
+                      <a href="">
+                          <img src="/assets/icons/youtube.png" alt="youtube">
+                      </a>
+                  </div>
+              </div>    
+            </div> 
+      </div>
+    </div>
+  
 
     <div class="blog">
         <div class="hero">
@@ -167,6 +178,9 @@
             <h1 class="hero-title">BLOG</h1>
             </div>
         </div>
+
+        <button onclick="scrollToTop() " id="toTop"><i class="fa-solid fa-arrow-up"></i></button>
+
 
         <main>
             <div class="container">
@@ -373,9 +387,9 @@
 
             <div class="col">
                 <ul>
-                    <li><a href="/">Blog</a></li>
-                    <li><a href="/">Qalereya</a></li>
-                    <li><a href="/">Əlaqə</a></li>
+                    <li><a href="/Blog.html">Blog</a></li>
+                    <li><a href="/Gallery.html">Qalereya</a></li>
+                    <li><a href="/Contact.html">Əlaqə</a></li>
                 </ul>
             </div>
 
@@ -397,7 +411,84 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="../assets/js/script.js"></script>
+    <!-- <script src="../assets/js/script.js"></script> -->
+
+    <script type="text/javascript">
+
+        // TO TOP
+        function scrollToTop() {
+            if (document.body.scrollTop !== 0 || document.documentElement.scrollTop !== 0) {
+                window.scrollBy(0, -50);
+                requestAnimationFrame(scrollToTop);
+            }
+        }
+
+        // toTop btn on scroll
+        var firstScrollpos;
+
+        const toTopScroll = () => {
+
+            var lastScrollPos = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (lastScrollPos > firstScrollpos) {
+                document.getElementById('toTop').style.display="block"
+            } else {
+                document.getElementById('toTop').style.display="none"
+
+
+            }
+            firstScrollpos = lastScrollPos;
+        }
+        // hide header on scroll
+        var prevScrollpos;
+        let header = document.getElementById("header-mobile");
+
+        const mobHeaderOnScroll = () => {
+
+            var currentScrollPos = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (currentScrollPos > prevScrollpos) {
+                header.classList = 'header-mobile non-fixed'
+            } else {
+                header.classList = 'header-mobile fixed'
+            }
+            prevScrollpos = currentScrollPos;
+        }
+
+        const handleScroll = () => {
+
+            // mobile header
+            if(window.pageYOffset >=  70) {
+                mobHeaderOnScroll()
+            } else {
+                header.classList = 'header-mobile'
+            }
+
+            if(window.pageYOffset >= 400) {
+                toTopScroll()
+            } else {
+                document.getElementById('toTop').style.display="none"
+            }
+
+        }
+
+
+        // hide navbar
+        let openIcon = document.getElementById('openIcon')
+        let closeIcon = document.getElementById('closeIcon')
+        let sidebar = document.getElementById('sidebar')
+        openIcon.addEventListener('click', () => {
+            sidebar.className="sidebar t-1"
+            document.body.style.overflowY='hidden'
+            document.getElementById('toTop').style.display = 'none'
+        } )
+
+        closeIcon.addEventListener('click', () => {
+            sidebar.className="sidebar t-0"
+            document.body.style.overflowY='scroll'
+            document.getElementById('toTop').style.display = 'block'
+        })
+    </script>
 
 </body>
 </html>

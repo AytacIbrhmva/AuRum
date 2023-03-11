@@ -68,6 +68,7 @@ main {
     padding: 20px 0;
     width: 200px;
     cursor: pointer;
+    outline: none;
 }
 
 .gallery-actions .container .foto-btn {
@@ -78,6 +79,7 @@ main {
     align-items: center;
     justify-content: center;
     transition: .2s;
+    border: 1px solid #28364B;
 }
 
 .gallery-actions .container .foto-btn:hover {
@@ -94,6 +96,10 @@ main {
     border: 1px dashed #28364B;
 }
 
+.gallery-actions .container .foto-btn:hover::after {
+    visibility: hidden;
+}
+
 .gallery-actions .container .video-btn {
     color: var(--text-dark);
     border: 1px solid #28364B;
@@ -102,9 +108,22 @@ main {
 }
 
 .gallery-actions .container .video-btn:hover {
-    color: #fff;
     background-color: #28364B;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
 }
+.gallery-actions .container .video-btn:hover::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+    border: 1px dashed #28364B;
+}
+    
 
 @media only screen and (max-width: 600px) {
     .gallery-actions .container button {

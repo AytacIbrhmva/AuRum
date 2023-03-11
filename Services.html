@@ -23,6 +23,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.0/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
     <script src="https://kit.fontawesome.com/982fb1c4c4.js" crossorigin="anonymous"></script>
@@ -30,7 +34,7 @@
 
 
 </head>
-<body onload="load()">
+<body  onscroll="handleScroll()">
    <div class="header">
       <div class="container">     
           <div class="top">
@@ -71,13 +75,10 @@
                       <a href="./Home.html">Ana səhifə</a>
                   </li>
                   <li>
-                      <a href="./About.html">Haqqımızda</a>
+                      <a href="./About.html" >Haqqımızda</a>
                   </li>
                   <li>
-                      <a href="./Services.html" class="active">
-                            Xidmətlər
-                            <img src="/assets/icons/arrow-icon.png" alt="">
-                        </a>
+                      <a href="./Services.html" class="active">Xidmətlər</a>
                   </li>
                   <li>
                       <a href="./Ships.html">Gəmilər</a>
@@ -96,9 +97,8 @@
           </nav>
       </div>
   </div>
-
-  <div class="header-mobile">
-      <div class="container">   
+  <div class="header-mobile" id="header-mobile">
+    <div class="container">   
           <a class="logo" href="/Home.html">
               <img src="/assets/images/logo.png" alt="">
           </a>  
@@ -106,59 +106,72 @@
 
 
           <div id="sidebar" class="sidebar t-0">
-              <i id="closeIcon" class="fa-solid fa-xmark menu-icon"></i>
 
-              <nav>
-               <ul>
-                   <li>
-                       <a href="./Home.html">Ana səhifə</a>
-                   </li>
-                   <li>
-                       <a href="./About.html">Haqqımızda</a>
-                   </li>
-                   <li>
-                       <a href="./Services.html" class="active">Xidmətlər</a>
-                   </li>
-                   <li>
-                       <a href="./Ships.html">Gəmilər</a>
-                   </li>
-                    </li>
-                   <li>
-                       <a href="./Blog.html">Blog</a>
-                   </li>
-                   <li>
-                       <a href="./Gallery.html">Qalereya</a>
-                   </li>
-                   <li>
-                       <a href="./Contact.html">Əlaqə</a>
-                   </li>
-               </ul>
-               </nav>
-              
-              <div class="social-medias">
-                  <a href="">
-                      <img src="/assets/icons/linkedin.png" alt="linkedin">
-                  </a>
-                  <a href="">
-                      <img src="/assets/icons/twitter.png" alt="twitter">
-                  </a>
-                  <a href="">
-                      <img src="/assets/icons/ig.png" alt="instagram">
-                  </a>
-                  <a href="">
-                      <img src="/assets/icons/youtube.png" alt="youtube">
-                  </a>
-              </div>
-          
-              <div class="lang-container">
-                  <button class="active">Az</button>
-                  <button>Ru</button>
-                  <button>En</button>
-              </div>
-                  
+            <div class="sidebar-header">
+                <a class="logo" href="/Home.html">
+                    <img src="/assets/images/logo.png" alt="">
+                </a>
+                <i id="closeIcon" class="fa-solid fa-xmark menu-icon"></i>
+            </div>
+
+            <div class="sidebar-container">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="./Home.html">Ana səhifə</a>
+                        </li>
+                        <li>
+                            <a href="./About.html" >Haqqımızda</a>
+                        </li>
+                        <li>
+                            <a href="./Services.html" class="active">Xidmətlər</a>
+                        </li>
+                        <li>
+                            <a href="./Ships.html">Gəmilər</a>
+                        </li>
+                            </li>
+                        <li>
+                            <a href="./Blog.html">Blog</a>
+                        </li>
+                        <li>
+                            <a href="./Gallery.html">Qalereya</a>
+                        </li>
+                        <li>
+                            <a href="./Contact.html">Əlaqə</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="tel">
+                    <i class="fa-solid fa-phone"></i>
+                    <div class="tel-links">
+                        <a href="tel:+994 55 2666690">+994 55 2666690</a>
+                        <a href="tel:+994 55 4466646">+994 55 4466646</a>
+                    </div>
+                </div>
+                <div class="mail">
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="mailto:">info@aurum.com</a>
+                </div>
+                
+                
+                <div class="social-medias">
+                    <a href="">
+                        <img src="/assets/icons/linkedin.png" alt="linkedin">
+                    </a>
+                    <a href="">
+                        <img src="/assets/icons/twitter.png" alt="twitter">
+                    </a>
+                    <a href="">
+                        <img src="/assets/icons/ig.png" alt="instagram">
+                    </a>
+                    <a href="">
+                        <img src="/assets/icons/youtube.png" alt="youtube">
+                    </a>
+                </div>
+            </div>    
           </div> 
-
-      </div>
+    </div>
   </div>
   
   <div class="services">
@@ -168,23 +181,27 @@
         </div>
     </div>
 
+    <button onclick="scrollToTop() " id="toTop"><i class="fa-solid fa-arrow-up"></i></button>
+
     <main>
-        <div class="ship-agency">
-            <div class="container">              
-                <div class="col">
-                    <div class="title-container">
-                        <h6 class="subtitle">Ship Agency</h6>
-                        <h3 class="title">Ship Agency</h3>
-                        <img class="underline-img" src="../assets/icons/title-underline.png" alt="underline"/>
-                    </div>                            
-                    <p class="desc">
-                        We provide prompt, efficient and effective agency services to vessels, principals and service providers from an experienced centralized operational hub
-                        <br><br>
-                        Matching real time, on the ground, local knowledge and expertise with our strict operational standards, whether it is your vessel, crew, cargo, or cash we’re looking after, our agents can be relied on to consistently make your port calls as efficient as possible. We use our expertise to make your everyday life more convenient with our services.
-                    </p>
-                </div>
-                <div class="col img-col">
-                    <img class="top-img" src="/assets/images/james-francis-cp6IwdZcqvM-unsplash 1.png" alt="">
+        <div class="content-wrapper">
+            <div class="ship-agency">
+                <div class="container">              
+                    <div class="col">
+                        <div class="title-container">
+                            <h6 class="subtitle">Ship Agency</h6>
+                            <h3 class="title">Ship Agency</h3>
+                            <img class="underline-img" src="../assets/icons/title-underline.png" alt="underline"/>
+                        </div>                            
+                        <p class="desc">
+                            We provide prompt, efficient and effective agency services to vessels, principals and service providers from an experienced centralized operational hub
+                            <br><br>
+                            Matching real time, on the ground, local knowledge and expertise with our strict operational standards, whether it is your vessel, crew, cargo, or cash we’re looking after, our agents can be relied on to consistently make your port calls as efficient as possible. We use our expertise to make your everyday life more convenient with our services.
+                        </p>
+                    </div>
+                    <div class="col img-col">
+                        <img class="top-img" src="/assets/images/james-francis-cp6IwdZcqvM-unsplash 1.png" alt="">
+                    </div>
                 </div>
             </div>
         </div>
@@ -207,7 +224,7 @@
                     </p>
                 </div>
             </div>
-        </div>
+        </div> 
 
         <div class="services-details">
             <div class="container">
@@ -230,35 +247,63 @@
             <div class="container">
                 <div class="top-row">
                     <div class="col">
-                        <img class="left-img" src="/assets/images/peter-hansen-MeGmdPNe36w-unsplash 2.png" alt="">
+                        <a href="/assets/images/peter-hansen-MeGmdPNe36w-unsplash 2.png" data-fancybox>
+                            <img class="left-img" src="/assets/images/peter-hansen-MeGmdPNe36w-unsplash 2.png" alt="">
+                        </a>
                     </div>
 
                     <div class="col">
                         <p class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
                         <div class="ships-imgs">
-                            <img src="/assets/images/rowship1.png" alt="">
-                            <img src="/assets/images/rowship2.png" alt="">
-                            <img src="/assets/images/rowship3.png" alt="">
-                            <img src="/assets/images/rowship4.png" alt="">
-                            <img src="/assets/images/rowship5.png" alt="">
-                            <img src="/assets/images/rowship6.png" alt="">
+                            <a href="/assets/images/rowship1.png" data-fancybox="group">
+                                <img src="/assets/images/rowship1.png" alt="">
+                            </a>
+                            <a href="/assets/images/rowship2.png" data-fancybox="group">
+                                <img src="/assets/images/rowship2.png" alt="">                            
+                            </a>
+                            <a href="/assets/images/rowship3.png" data-fancybox="group">
+                                <img src="/assets/images/rowship3.png" alt="">                            
+                            </a>
+                            <a href="/assets/images/rowship4.png" data-fancybox="group">
+                                <img src="/assets/images/rowship4.png" alt="">                            
+                            </a>
+                            <a href="/assets/images/rowship5.png" data-fancybox="group">
+                                <img src="/assets/images/rowship5.png" alt="">                            
+                            </a>
+                            <a href="/assets/images/rowship6.png" data-fancybox="group">
+                                <img src="/assets/images/rowship6.png" alt="">                            
+                            </a>
+
                         </div>
                     </div>
                 </div>
                 
                 <div class="bottom-imgs">
-                    <div class="img-box">
-                        <img src="/assets/images/bottom1.png" alt="">
-                    </div>
-                    <div class="img-box">
-                        <img src="/assets/images/bottom2.png" alt="">
-                    </div>
-                    <div class="img-box">
-                        <img src="/assets/images/bottom3.png" alt="">
-                    </div>
-                    <div class="img-box">
-                        <img src="/assets/images/bottom4.png" alt="">
-                    </div>
+                    
+                    <a href="/assets/images/bottom1.png" data-fancybox="group">
+                        <div class="img-box">
+                            <img src="/assets/images/bottom1.png" alt="">
+                        </div>
+                    </a>
+                    <a href="/assets/images/bottom2.png"" data-fancybox="group">
+                        <div class="img-box">
+                            <img src="/assets/images/bottom2.png" alt="">
+                        </div>
+                    </a>
+                    <a href="/assets/images/bottom3.png" data-fancybox="group">
+                        <div class="img-box">
+                            <img src="/assets/images/bottom3.png" alt="">
+                        </div>
+                    </a>
+                    <a href="/assets/images/bottom4.png" data-fancybox="group">
+                        <div class="img-box">
+                            <img src="/assets/images/bottom4.png" alt="">
+                        </div>
+                    </a>
+                   
+                   
+                  
+                    
                 </div>
             </div>
         </div>
@@ -285,9 +330,9 @@
 
           <div class="col">
               <ul>
-                  <li><a href="/">Blog</a></li>
-                  <li><a href="/">Qalereya</a></li>
-                  <li><a href="/">Əlaqə</a></li>
+                  <li><a href="/Blog.html">Blog</a></li>
+                  <li><a href="/Gallery.html">Qalereya</a></li>
+                  <li><a href="/Contact.html">Əlaqə</a></li>
               </ul>
           </div>
 
@@ -307,11 +352,14 @@
       </div>
   </footer>
 
-
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="../assets/js/script.js"></script>
+    <script src="/assets/js/Services.js"></script>
+  
 
 </body>
 </html>
+
+
+
 
 

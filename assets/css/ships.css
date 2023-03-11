@@ -10,6 +10,17 @@ main {
     background-color: rgba(206, 189, 136, 0.2);
 }
 
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 /* HERO */
 .ships .hero {
